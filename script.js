@@ -1,4 +1,5 @@
-const productList = localStorage.getItem("productList") ? localStorage.getItem(JSON.parse("productList"))  : [];
+const productList = localStorage.getItem("productList") ? JSON.parse(localStorage.getItem("productList")) : [];
+
 
 const cardContainer = document.querySelector(".card");
 const productCard = ({title,img,price,desc}) => {
@@ -20,7 +21,7 @@ const productCard = ({title,img,price,desc}) => {
   container.innerHTML = `${data.map(fun).join("")}`;
   };
 
-// renderData(ProductList,cardContainer,productCard);
+renderData(productList,cardContainer,productCard);
 
 
 
