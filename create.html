@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" bg-slate-900">
+    <nav class="flex justify-between text-white py-5 bg-black px-[5vw]">
+        <a href="" class="logo text-2xl">Home</a>
+        <ul class="flex gap-5 text-xl">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="./create.html">Create</a></li>
+        </ul>
+      </nav>
+  <div class="flex justify-center items-center w-[50%] mx-auto  px-[5vw]">
+    <form class="flex flex-col gap-5 text-white w-full mt-8">
+        <div class="flex flex-col gap-3">
+            <label class="block font-bold">Product Title</label>
+            <input class="border  py-2 px-4 bg-transparent outline-none"type="text" id="title" onchange="getData(this)" required>
+          </div>
+          <div class="flex flex-col gap-4">
+            <label class="block font-bold">Select Product Image</label>
+            <input type="file" onchange="getData(this)" id="img" required>
+          </div>
+        <div class="flex flex-col gap-3">
+            <label class="block font-bold">Product Price</label>
+            <input class="border w-full py-2 px-4 bg-transparent outline-none"type="text" onchange="getData(this)" id="price" required>
+          </div>
+        <div class="flex flex-col gap-3">
+            <label class="block font-bold">Product Description</label>
+        <textarea class="border w-full py-2 px-4 bg-transparent outline-none" onchange="getData(this)" id="desc" required></textarea>
+          </div>
+            <button class=" bg-green-900 font-bold py-2 px-4 rounded w-fit">Add Product</button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
