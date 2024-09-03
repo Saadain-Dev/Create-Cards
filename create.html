@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class=" bg-slate-900">
-    <nav class="flex justify-between text-white py-5 bg-black px-[5vw]">
+    <nav class="flex flex-col sm:flex-row justify-between text-white py-5 bg-black px-[5vw]">
         <a href="" class="logo text-2xl">Home</a>
         <ul class="flex gap-5 text-xl">
           <li><a href="./index.html">Home</a></li>
@@ -25,7 +25,7 @@
           </div>
           <div class="flex flex-col gap-4">
             <label class="block font-bold">Select Product Image</label>
-            <input type="file" onchange="getData(this)" id="img" required>
+            <input class="border w-full py-2 px-4 bg-transparent outline-none" id="img" type="url" onchange="getData(this)" required>
           </div>
         <div class="flex flex-col gap-3">
             <label class="block font-bold">Product Price</label>

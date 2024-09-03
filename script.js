@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const productCard = ({ title, img, price, desc }, index) => {
         return `
         <div class="w-full max-w-sm border rounded-lg text-white relative" data-index="${index}">
-            <a href="#"><img class="p-8 rounded-t-lg" src="${img}" alt="" /></a>
+            <a href="#">
+            <img class="p-8 rounded-t-lg w-full h-[200px] object-contain" src="${img}" alt="" />
+            </a>
             <div class="px-5 pb-5">
                 <a href="#"><h5 class="text-2xl font-semibold">${title}</h5></a>
                 <div class="flex items-center justify-between">
@@ -20,9 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     };
 
-    const renderData = (data, container, fun) => {
-        container.innerHTML = `${data.map(fun).join("")}`;
-    };
+    const renderData = (data, container, fun) => container.innerHTML = `${data.map(fun).join("")}`;
 
     const deleteProduct = (index) => {
         productList.splice(index, 1);
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    console.log(productList);
     renderData(productList, cardContainer, productCard);
 });
-
 
 
 

@@ -4,7 +4,7 @@ const productList = localStorage.getItem("productList") ? JSON.parse(localStorag
 const product = { title: "", img: "", price: "", desc: "" };
 
 const getData = (e) => {
-  product[e.id] = e.id === "img" ? URL.createObjectURL(e.files[0]) : e.value;
+  product[e.id] = e.value;
 };
 
 const Submit = (e) => {
